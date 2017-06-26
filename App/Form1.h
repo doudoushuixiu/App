@@ -1,10 +1,5 @@
 #pragma once
 
-unsigned char i = 0;
-
-//string PortName[];
-
-
 
 namespace App {
 
@@ -50,6 +45,9 @@ namespace App {
 	protected: 
 
 	private:
+		static SerialPort^ _serialPort;
+				 
+
 		/// <summary>
 		/// 必需的设计器变量。
 		/// </summary>
@@ -116,26 +114,41 @@ namespace App {
 
 #pragma endregion
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-				 i++;
-				 this->label1->Text = L"Hello world";
-				          MessageBox::Show("NOTHING");
+
+				// _serialPort->PortName = comboBox1->Text;
+				 this->label1->Text = comboBox1->Text;
+
+				// _serialPort->PortName = comboBox1->Text;
+				 serialPort1->PortName = "COM3";
+
+				 serialPort1->BaudRate = 9600;
+				 //serialPort1.Parity = Parity.Even;       //偶检验
+				// serialPort1.StopBits = StopBits.One;
+			     serialPort1->Parity = (Parity)Enum::Parse(Parity::typeid, "Even");
+				 serialPort1->Parity = Even;   
+
+				 serialPort1->DataBits = 8;
+				 serialPort1->Open();
+				  while (1)
+				  {
+					  try
+					  {
+						  String^ message = serialPort1->ReadLine();
+						  Console::WriteLine(message);
+					  }
+					  catch (TimeoutException ^) { }
+				  }
+
+				// MessageBox::Show("NOTHING");
 			 }
+
+
 	private: System::Void Form1_Load(System::Object^  sender, System::EventArgs^  e) {
-                 this->label1->Text = L"Hello";
-				  comboBox1->Items->Add("COM12");
-				  comboBox1->Items->Add("COM1");
-
-					array<String^>^ serialPorts = nullptr;
-					try
-					{
-						// Get a list of serial port names.
-						serialPorts = SerialPort::GetPortNames();
-					}
-					catch (Win32Exception^ ex)
-					{
-						Console::WriteLine(ex->Message);
-					}
-
+                this->label1->Text = "Hello";
+				for each (String^ s in SerialPort::GetPortNames())
+				{
+					comboBox1->Items->Add(s);
+				}
 			 }
 	};
 }
