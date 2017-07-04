@@ -1,6 +1,14 @@
 #pragma once
 
 
+
+
+int  ReadIndex;
+int  ReadCount;
+ SerialPort^ _serialPort = gcnew SerialPort();
+ array<unsigned char>^ ReceiveBuffer = gcnew array<unsigned char>(0xFF);
+
+
 namespace App {
 
 	using namespace System;
@@ -10,6 +18,7 @@ namespace App {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace System::IO::Ports;
+	
 
 	/// <summary>
 	/// Form1 摘要
@@ -17,13 +26,21 @@ namespace App {
 	public ref class Form1 : public System::Windows::Forms::Form
 	{
 	public:
+
+
 		Form1(void)
 		{
 			InitializeComponent();
+
+           // V3_Function();
+
+
 			//
 			//TODO: 在此处添加构造函数代码
 			//
 		}
+	    
+
 
 	protected:
 		/// <summary>
@@ -36,17 +53,18 @@ namespace App {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^  button1;
-	private: System::Windows::Forms::Label^  label1;
-	private: System::IO::Ports::SerialPort^  serialPort1;
-	private: System::Windows::Forms::ComboBox^  comboBox1;
-
+	private: System::Windows::Forms::Button^      button1;
+	private: System::Windows::Forms::Label^       label1;
+	private: System::IO::Ports::SerialPort^       serialPort1;
+	private: System::Windows::Forms::ComboBox^    comboBox1;
 	private: System::ComponentModel::IContainer^  components;
-	protected: 
 
+	protected: 
+       //TODO 
 	private:
-		static SerialPort^ _serialPort;
-				 
+
+
+		//Thread^ ReceiveThread = gcnew Thread( gcnew ThreadStart( &ThreadExample::ThreadProc);
 
 		/// <summary>
 		/// 必需的设计器变量。
@@ -88,11 +106,15 @@ namespace App {
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Status:";
 			// 
+			// serialPort1
+			// 
+			this->serialPort1->Parity = System::IO::Ports::Parity::Even;
+			// 
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Location = System::Drawing::Point(28, 20);
-			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Name = L"comboBox_uart";
 			this->comboBox1->Size = System::Drawing::Size(121, 20);
 			this->comboBox1->TabIndex = 2;
 			// 
@@ -109,37 +131,23 @@ namespace App {
 			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
-
 		}
 
+
+
 #pragma endregion
-	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 
-				// _serialPort->PortName = comboBox1->Text;
-				 this->label1->Text = comboBox1->Text;
-
-				// _serialPort->PortName = comboBox1->Text;
-				 serialPort1->PortName = "COM3";
-
-				 serialPort1->BaudRate = 9600;
-				 //serialPort1.Parity = Parity.Even;       //偶检验
-				// serialPort1.StopBits = StopBits.One;
-			     serialPort1->Parity = (Parity)Enum::Parse(Parity::typeid, "Even");
-				 serialPort1->Parity = Even;   
-
-				 serialPort1->DataBits = 8;
-				 serialPort1->Open();
-				  while (1)
-				  {
-					  try
-					  {
-						  String^ message = serialPort1->ReadLine();
-						  Console::WriteLine(message);
-					  }
-					  catch (TimeoutException ^) { }
-				  }
-
-				// MessageBox::Show("NOTHING");
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {				
+				 
+                 _serialPort->PortName = comboBox1->Text;
+				 _serialPort->BaudRate = 9600;   
+				 _serialPort->StopBits = System::IO::Ports::StopBits::One;
+				 _serialPort->Parity = System::IO::Ports::Parity::Even;
+				 _serialPort->DataBits = 8;
+				 _serialPort->ReadTimeout = 500;
+				 _serialPort->WriteTimeout = 500;
+				 _serialPort->Open();
+				
 			 }
 
 

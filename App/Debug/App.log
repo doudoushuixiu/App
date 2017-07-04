@@ -1,21 +1,43 @@
-﻿生成启动时间为 2017/6/23 星期五 12:12:45。
-     1>项目“C:\Users\Administrator\Desktop\App\App\App.vcxproj”在节点 2 上(rebuild 个目标)。
-     1>_PrepareForClean:
-         正在删除文件“Debug\App.lastbuildstate”。
-       InitializeBuildStatus:
+﻿生成启动时间为 2017/6/30 11:49:00。
+     1>项目“C:\Users\root\Desktop\VCAPP\App\App\App.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
          正在对“Debug\App.unsuccessfulbuild”执行 Touch 任务。
        GenerateTargetFrameworkMonikerAttribute:
        正在跳过目标“GenerateTargetFrameworkMonikerAttribute”，因为所有输出文件相对于输入文件而言都是最新的。
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\App.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt stdafx.cpp /clr:nostdlib 
-         stdafx.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\App.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt App.cpp AssemblyInfo.cpp /clr:nostdlib 
+         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\App.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt App.cpp /clr:nostdlib 
          App.cpp
-     1>c:\users\administrator\desktop\app\app\Form1.h(128): error C2065: “Even”: 未声明的标识符
-         AssemblyInfo.cpp
-         正在生成代码...
-     1>已完成生成项目“C:\Users\Administrator\Desktop\App\App\App.vcxproj”(rebuild 个目标)的操作 - 失败。
+     1>c:\users\root\desktop\vcapp\app\app\Form1.h(8): error C2143: 语法错误 : 缺少“;”(在“^”的前面)
+     1>c:\users\root\desktop\vcapp\app\app\Form1.h(8): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>c:\users\root\desktop\vcapp\app\app\Form1.h(8): error C3145: “_serialPort”: 全局或静态变量的类型不能是托管类型“System::Int32 ^”
+                 不能声明全局或静态变量，也不能声明引用 gc 堆中对象的本机类型成员
+     1>c:\users\root\desktop\vcapp\app\app\Form1.h(8): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>c:\users\root\desktop\vcapp\app\app\Form1.h(8): error C2061: 语法错误: 标识符“SerialPort”
+     1>c:\users\root\desktop\vcapp\app\app\Form1.h(9): error C3145: “ReceiveBuffer”: 全局或静态变量的类型不能是托管类型“cli::array<Type> ^”
+                 with
+                 [
+                     Type=unsigned char
+                 ]
+                 不能声明全局或静态变量，也不能声明引用 gc 堆中对象的本机类型成员
+     1>c:\users\root\desktop\vcapp\app\app\Form1.h(142): error C2039: “PortName”: 不是“System::Int32”的成员
+                 c:\users\root\desktop\vcapp\app\app\Form1.h(8) : 参见“System::Int32”的声明
+     1>c:\users\root\desktop\vcapp\app\app\Form1.h(143): error C2039: “BaudRate”: 不是“System::Int32”的成员
+                 c:\users\root\desktop\vcapp\app\app\Form1.h(8) : 参见“System::Int32”的声明
+     1>c:\users\root\desktop\vcapp\app\app\Form1.h(144): error C2039: “StopBits”: 不是“System::Int32”的成员
+                 c:\users\root\desktop\vcapp\app\app\Form1.h(8) : 参见“System::Int32”的声明
+     1>c:\users\root\desktop\vcapp\app\app\Form1.h(145): error C2039: “Parity”: 不是“System::Int32”的成员
+                 c:\users\root\desktop\vcapp\app\app\Form1.h(8) : 参见“System::Int32”的声明
+     1>c:\users\root\desktop\vcapp\app\app\Form1.h(146): error C2039: “DataBits”: 不是“System::Int32”的成员
+                 c:\users\root\desktop\vcapp\app\app\Form1.h(8) : 参见“System::Int32”的声明
+     1>c:\users\root\desktop\vcapp\app\app\Form1.h(147): error C2039: “ReadTimeout”: 不是“System::Int32”的成员
+                 c:\users\root\desktop\vcapp\app\app\Form1.h(8) : 参见“System::Int32”的声明
+     1>c:\users\root\desktop\vcapp\app\app\Form1.h(148): error C2039: “WriteTimeout”: 不是“System::Int32”的成员
+                 c:\users\root\desktop\vcapp\app\app\Form1.h(8) : 参见“System::Int32”的声明
+     1>c:\users\root\desktop\vcapp\app\app\Form1.h(149): error C2039: “Open”: 不是“System::Int32”的成员
+                 c:\users\root\desktop\vcapp\app\app\Form1.h(8) : 参见“System::Int32”的声明
+     1>已完成生成项目“C:\Users\root\Desktop\VCAPP\App\App\App.vcxproj”(build 个目标)的操作 - 失败。
 
 生成失败。
 
-已用时间 00:00:00.65
+已用时间 00:00:00.31
