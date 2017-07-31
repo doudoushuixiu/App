@@ -8,7 +8,16 @@ using namespace System::Threading;
 
 
 void V3_Function(void)
-{				 ReadIndex++; 
+{				 
+	
+	while(1)
+	{
+
+
+	  ReadIndex++;
+	
+	}
+
 	try
 	{
 		//if(_serialPort->BytesToRead > 1)
@@ -29,7 +38,7 @@ public:
 	// the rest of its time slice each time, and then ends.
 	static void ThreadProc()
 	{
-     // V3_Function();
+      V3_Function();
 	}
 
 };
@@ -42,7 +51,7 @@ int main(array<System::String ^> ^args)
 	Application::SetCompatibleTextRenderingDefault(false); 
 
 	// 创建主窗口并运行它
-	Thread^ ReceiveThread = gcnew Thread( gcnew ThreadStart( &ThreadExample::ThreadProc));
+    Thread^ ReceiveThread = gcnew Thread( gcnew ThreadStart( &ThreadExample::ThreadProc));
 	ReceiveThread->Start();
 
 	Application::Run(gcnew Form1());

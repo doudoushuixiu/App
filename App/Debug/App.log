@@ -1,4 +1,4 @@
-﻿生成启动时间为 2017/6/30 11:49:00。
+﻿生成启动时间为 2017/7/31 18:04:25。
      1>项目“C:\Users\root\Desktop\VCAPP\App\App\App.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在对“Debug\App.unsuccessfulbuild”执行 Touch 任务。
@@ -8,36 +8,24 @@
          所有输出均为最新。
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\App.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt App.cpp /clr:nostdlib 
          App.cpp
-     1>c:\users\root\desktop\vcapp\app\app\Form1.h(8): error C2143: 语法错误 : 缺少“;”(在“^”的前面)
-     1>c:\users\root\desktop\vcapp\app\app\Form1.h(8): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
-     1>c:\users\root\desktop\vcapp\app\app\Form1.h(8): error C3145: “_serialPort”: 全局或静态变量的类型不能是托管类型“System::Int32 ^”
-                 不能声明全局或静态变量，也不能声明引用 gc 堆中对象的本机类型成员
-     1>c:\users\root\desktop\vcapp\app\app\Form1.h(8): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
-     1>c:\users\root\desktop\vcapp\app\app\Form1.h(8): error C2061: 语法错误: 标识符“SerialPort”
-     1>c:\users\root\desktop\vcapp\app\app\Form1.h(9): error C3145: “ReceiveBuffer”: 全局或静态变量的类型不能是托管类型“cli::array<Type> ^”
-                 with
-                 [
-                     Type=unsigned char
-                 ]
-                 不能声明全局或静态变量，也不能声明引用 gc 堆中对象的本机类型成员
-     1>c:\users\root\desktop\vcapp\app\app\Form1.h(142): error C2039: “PortName”: 不是“System::Int32”的成员
-                 c:\users\root\desktop\vcapp\app\app\Form1.h(8) : 参见“System::Int32”的声明
-     1>c:\users\root\desktop\vcapp\app\app\Form1.h(143): error C2039: “BaudRate”: 不是“System::Int32”的成员
-                 c:\users\root\desktop\vcapp\app\app\Form1.h(8) : 参见“System::Int32”的声明
-     1>c:\users\root\desktop\vcapp\app\app\Form1.h(144): error C2039: “StopBits”: 不是“System::Int32”的成员
-                 c:\users\root\desktop\vcapp\app\app\Form1.h(8) : 参见“System::Int32”的声明
-     1>c:\users\root\desktop\vcapp\app\app\Form1.h(145): error C2039: “Parity”: 不是“System::Int32”的成员
-                 c:\users\root\desktop\vcapp\app\app\Form1.h(8) : 参见“System::Int32”的声明
-     1>c:\users\root\desktop\vcapp\app\app\Form1.h(146): error C2039: “DataBits”: 不是“System::Int32”的成员
-                 c:\users\root\desktop\vcapp\app\app\Form1.h(8) : 参见“System::Int32”的声明
-     1>c:\users\root\desktop\vcapp\app\app\Form1.h(147): error C2039: “ReadTimeout”: 不是“System::Int32”的成员
-                 c:\users\root\desktop\vcapp\app\app\Form1.h(8) : 参见“System::Int32”的声明
-     1>c:\users\root\desktop\vcapp\app\app\Form1.h(148): error C2039: “WriteTimeout”: 不是“System::Int32”的成员
-                 c:\users\root\desktop\vcapp\app\app\Form1.h(8) : 参见“System::Int32”的声明
-     1>c:\users\root\desktop\vcapp\app\app\Form1.h(149): error C2039: “Open”: 不是“System::Int32”的成员
-                 c:\users\root\desktop\vcapp\app\app\Form1.h(8) : 参见“System::Int32”的声明
-     1>已完成生成项目“C:\Users\root\Desktop\VCAPP\App\App\App.vcxproj”(build 个目标)的操作 - 失败。
+     1>c:\users\root\desktop\vcapp\app\app\Form1.h(246): warning C4244: “=”: 从“wchar_t”转换到“char”，可能丢失数据
+         所有输出均为最新。
+       CoreResGen:
+         没有相对于源文件而言已过期的资源。正在跳过资源生成操作。
+       ResourceCompile:
+         所有输出均为最新。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\root\Desktop\VCAPP\App\Debug\App.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\App.Form1.resources /MANIFEST:NO /DEBUG /PDB:"C:\Users\root\Desktop\VCAPP\App\Debug\App.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
+         Debug\App.obj
+         Debug\AssemblyInfo.obj
+         Debug\stdafx.obj
+         "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+         App.vcxproj -> C:\Users\root\Desktop\VCAPP\App\Debug\App.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\App.unsuccessfulbuild”。
+         正在对“Debug\App.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“C:\Users\root\Desktop\VCAPP\App\App\App.vcxproj”(build 个目标)的操作。
 
-生成失败。
+生成成功。
 
-已用时间 00:00:00.31
+已用时间 00:00:00.92
